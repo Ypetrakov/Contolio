@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.example.serverttest.JoystickView
+        android:id="@+id/joystickView"
+        android:layout_margin="5dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/mouse_left_click"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/joystickView"
+        app:layout_constraintStart_toStartOf="@+id/joystickView" />
+
+    <Button
+        android:id="@+id/mouse_right_click"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/joystickView"
+        app:layout_constraintEnd_toEndOf="@+id/joystickView" />
+
+
+
+    <ImageView
+        android:id="@+id/keyboard"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_keyboard_24"
+        app:layout_constraintBottom_toTopOf="@+id/mouse_right_click"
+        app:layout_constraintEnd_toEndOf="@+id/mouse_left_click"
+        app:layout_constraintStart_toStartOf="@+id/mouse_left_click" />
+
+    <ImageView
+        android:id="@+id/paste_text"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_content_paste_24"
+        app:layout_constraintBottom_toTopOf="@+id/mouse_right_click"
+        app:layout_constraintEnd_toEndOf="@+id/mouse_right_click"
+        app:layout_constraintStart_toStartOf="@+id/mouse_right_click" />
+
+    <ImageView
+        android:id="@+id/file_sender"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_insert_drive_file_24"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard"
+        app:layout_constraintEnd_toEndOf="@+id/keyboard"
+        app:layout_constraintStart_toStartOf="@+id/keyboard" />
+    <ImageView
+        android:id="@+id/shortcuts"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_app_shortcut_24"
+        app:layout_constraintBottom_toTopOf="@+id/paste_text"
+        app:layout_constraintEnd_toEndOf="@+id/paste_text"
+        app:layout_constraintStart_toStartOf="@+id/paste_text" />
+
+    <ImageView
+        android:id="@+id/volume_down"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_volume_down_24"
+        app:layout_constraintBottom_toTopOf="@+id/file_sender"
+        app:layout_constraintEnd_toEndOf="@+id/file_sender"
+        app:layout_constraintStart_toStartOf="@+id/file_sender" />
+
+    <ImageView
+        android:id="@+id/volume_up"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_volume_up_24"
+        app:layout_constraintBottom_toTopOf="@+id/shortcuts"
+        app:layout_constraintEnd_toEndOf="@+id/shortcuts"
+        app:layout_constraintStart_toStartOf="@+id/shortcuts" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
